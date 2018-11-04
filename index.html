@@ -18,15 +18,29 @@
 
 <script>
 
-    function setSecondHand() {
+    function setDate() {
         let now = new Date();
-        let hand = document.querySelector('.seconds');
+
+        let secHand = document.querySelector('.seconds');
+        let minHand = document.querySelector('.minutes');
+        let hourHand = document.querySelector('.hours');
+
         let currentSecond = now.getSeconds();
         let currentSecondDeg = ((currentSecond / 60) * 360) + 90;
-        hand.style.transform = `rotate(${currentSecondDeg}deg)`
-    }
+        secHand.style.transform = `rotate(${currentSecondDeg}deg)`;
 
-    setInterval(setSecondHand, 1000)
+        let currentMinute = now.getMinutes();
+        let currentMinuteDeg = ((currentMinute / 60) * 360) + ((currentSecond / 60) * 6) + 90;
+        minHand.style.transform = `rotate(${currentMinuteDeg}deg)`;
+
+        let currentHour = now.getHours();
+        let currentHourDeg = ((currentHour / 12) * 360) + ((currentMinute / 60) * 30) + 90;
+
+        hourHand.style.transform = `rotate(${currentHourDeg}deg)`;
+
+    }
+    setDate();
+    setInterval(setDate, 1000)
 
 </script>
 

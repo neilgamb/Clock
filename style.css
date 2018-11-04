@@ -43,3 +43,23 @@ body {
   transform-origin: 100%;
   transform: rotate(90deg);
 }
+
+.hand:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.hours:after {
+  content: "hours";
+}
+
+.minutes:after {
+  content: "minutes";
+}
+
+.seconds::after {
+  content: "seconds";
+}
