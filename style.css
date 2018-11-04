@@ -1,0 +1,45 @@
+html {
+  background-size: cover;
+  background: #1488cc;
+  background: -webkit-linear-gradient(
+    to right,
+    #2b32b2,
+    #1488cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2b32b2,
+    #1488cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-face {
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+}
+
+.hand {
+  border: 2px solid white;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
