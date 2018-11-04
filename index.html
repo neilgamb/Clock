@@ -18,6 +18,15 @@
 
 <script>
 
+    function setSecondHand() {
+        let now = new Date();
+        let hand = document.querySelector('.seconds');
+        let currentSecond = now.getSeconds();
+        let currentSecondDeg = ((currentSecond / 60) * 360) + 90;
+        hand.style.transform = `rotate(${currentSecondDeg}deg)`
+    }
+
+    setInterval(setSecondHand, 1000)
 
 </script>
 
